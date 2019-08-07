@@ -1,0 +1,15 @@
+.content {
+    background: #ccf;
+    color: #333;
+}
+.detail-tit {
+    text-align: center;
+    padding: 30px 0 20px;
+}
+.detail-text {
+    padding: 0 30px 40px;
+}
+
+.back-index {
+    padding: 0 0 40px 20px;
+}

@@ -1,0 +1,44 @@
+input {
+    width: 360px;
+    height: 28px;
+    padding: 10px;
+    font-size: 16px;
+    color: #666;
+}
+
+textarea {
+    width: 480px;
+    height: 120px;
+    padding: 10px;
+    font-size: 16px;
+    color: #666;
+}
+h3 {
+    padding: 10px 0;
+}
+label {
+    font-size: 18px;
+    color: #333;
+}
+
+.wrap {
+    background: #fcc;
+    padding: 30px 60px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+.form-item {
+    display: flex;
+    margin-bottom: 10px;
+}
+.submit-btn {
+    width: 120px;
+    height: 40px;
+    border-radius: 4px;
+    background: #cfc;
+    font-size: 18px;
+}
+
+

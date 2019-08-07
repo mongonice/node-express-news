@@ -1,0 +1,47 @@
+.nav {
+    background: #f66;
+    color: #333;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.main {
+    background:#cf9;
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-bottom: 0;
+}
+
+.handle-news {
+    height: 40px;
+}
+.add-news {
+    margin-right: 0;
+    margin-left: auto;
+    padding: 10px 20px;
+    font-size: 24px;
+    line-height: 40px;
+}
+
+.news-list {
+    padding: 10px 30px;
+}
+.news-list>li {
+    padding: 15px 0;
+}
+
+.news-tit {
+    text-decoration: underline;
+    color: #66c;
+    font-size: 26px;
+}
+.news-text {
+    color: #999;
+    font-size: 20px;
+}
+
+.total-num {
+    font-size: 24px;
+    color: #336;
+    padding: 20px; 
+}

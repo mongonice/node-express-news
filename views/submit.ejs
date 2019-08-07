@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/css/submit.css">
+    <title><%= title%></title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrap">
+            <div class="back-index"><a href="/">&lt;返回</a></div>
+
+            <h3>GET方式提交</h3>
+            <form class="form-group" action="/add" method="get">
+                <div class="form-item">
+                        <label for="">新闻标题：</label><input type="text" name="title" required>
+                </div>
+                <div class="form-item">
+                        <label for="">新闻链接：</label>
+                        <input type="text" name="url" required>
+                </div>
+                <div class="form-item">
+                        <label for="">新闻正文：</label>
+                        <textarea name="text" required></textarea>
+                </div>
+                <button class="submit-btn">提交</button>
+            </form>
+
+            <h3>POST方式提交</h3>
+            <form class="form-group" action="/add" method="get">
+                <div class="form-item">
+                        <label for="">新闻标题：</label><input type="text" name="title" required>
+                </div>
+                <div class="form-item">
+                        <label for="">新闻链接：</label>
+                        <input type="text" name="url" required>
+                </div>
+                <div class="form-item">
+                        <label for="">新闻正文：</label>
+                        <textarea name="text" required></textarea>
+                </div>
+                <button class="submit-btn">提交</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

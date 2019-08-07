@@ -1,0 +1,22 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul, li {
+    list-style: none;
+}
+
+input, textarea, button {
+    outline: none;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1024px;
+    margin: 0 auto;
+}
