@@ -22,6 +22,7 @@ label {
 }
 
 .wrap {
+    flex: 1;
     background: #fcc;
     padding: 30px 60px;
 }

@@ -1,5 +1,6 @@
 var path = require('path');
 var fs = require('fs');
+var config = require('./config.js');
 
 // 其实 handler.js 做的事情就是 controller做的事情，处理具体的业务
 // 只不过将handler.js 拆分成不同业务模块
@@ -18,7 +19,7 @@ module.exports.index = function (req, res) {
     //     res.send(result)
     // })
    
-    readData(path.join(__dirname, 'database', 'data.json'), function (list) {
+    readData(config.dataPath, function (list) {
         list = list || [];
         res.render(path.join(__dirname, 'views', 'index.ejs'), {title: '首页', list: list})
     })
@@ -32,7 +33,7 @@ module.exports.submit = function (req, res) {
 module.exports.detail = function (req, res) {
     console.log('参数', req.params)  // {id: '2'}
 
-    readData(path.join(__dirname, 'database', 'data.json'), function (data) {
+    readData(config.dataPath, function (data) {
         
         var list = data;
         var item = {};
@@ -52,7 +53,7 @@ module.exports.detail = function (req, res) {
 
 module.exports.addget = function (req, res) {
     // get方式请求
-    readData(path.join(__dirname, 'database', 'data.json'), function (data) {
+    readData(config.dataPath, function (data) {
         
         var list = data || [];
         var userData = req.query;
@@ -71,7 +72,7 @@ module.exports.addget = function (req, res) {
 module.exports.addpost = function (req, res) {
     // post请求
     console.log('bodyParser', req.body)
-    readData(path.join(__dirname, 'database', 'data.json'), function (data) {
+    readData(config.dataPath, function (data) {
         
         var list = data || [];
         var userData = req.body;
@@ -119,7 +120,7 @@ function writeData (data, cb) {
     
     data = JSON.stringify(data);
 
-    fs.writeFile(path.join(__dirname, 'database', 'data.json'), data, 'utf8',function (err) {
+    fs.writeFile(config.dataPath, data, 'utf8',function (err) {
         if (err && err.code != 'ENOENT') {
             throw err;
         }
