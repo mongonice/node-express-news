@@ -21,12 +21,12 @@ module.exports.index = function (req, res) {
    
     readData(config.dataPath, function (list) {
         list = list || [];
-        res.render(path.join(__dirname, 'views', 'index.ejs'), {title: '首页', list: list})
+        res.render(path.join(__dirname, 'views', 'index.html'), {title: '首页', list: list})
     })
 }
 
 module.exports.submit = function (req, res) {
-    res.render(path.join(__dirname, 'views', 'submit.ejs'), {title: '表单提交'})
+    res.render(path.join(__dirname, 'views', 'submit.html'), {title: '表单提交'})
 }
 
 
@@ -47,7 +47,7 @@ module.exports.detail = function (req, res) {
 
         console.log('item', item)
 
-        res.render(path.join(__dirname, 'views', 'detail.ejs'), {title: '详情', item: item})
+        res.render(path.join(__dirname, 'views', 'detail.html'), {title: '详情', item: item})
     })
 }
 
