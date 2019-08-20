@@ -1,5 +1,5 @@
 .nav {
-    background: #f66;
+    background: #CC99CC;
     color: #333;
     text-align: center;
     border-radius: 10px 10px 0 0;
@@ -7,18 +7,24 @@
 
 .main {
     flex: 1;
-    background:#cf9;
-    margin-top: 20px;
-    border-radius: 10px;
+    background: #FF9966;
 }
 
 .handle-news {
-    height: 40px;
+    height: 60px;
+    padding-left: 30px;
 }
 .add-news {
+    font-size: 18px;
+    line-height: 60px;
+    left: 0;
+    cursor: pointer;
+    border: 1px solid #000;
     padding: 10px 20px;
-    font-size: 24px;
-    line-height: 40px;
+}
+.add-news:hover {
+    text-decoration: underline;
+    transition: all 0.2s linear;
 }
 
 .news-list {
@@ -34,7 +40,7 @@
     font-size: 26px;
 }
 .news-text {
-    color: #999;
+    color: #330033;
     font-size: 20px;
 }
 
@@ -42,5 +48,4 @@
     font-size: 24px;
     color: #336;
     padding: 20px;
-
 }

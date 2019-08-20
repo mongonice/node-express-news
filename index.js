@@ -6,6 +6,10 @@ var ejs = require('ejs');
 
 var router = require('./router.js');
 
+console.log('当前进程所在目录', process.cwd())
+console.log('当前进程所起项目名称', process.argv[3])
+
+
 var app = express();
 
 // express配置模板引擎
@@ -42,3 +46,5 @@ app.use(function (req, res, next) {
 app.listen(config.port, function () {
     console.log('http:localhost:' + config.port)
 })
+
+

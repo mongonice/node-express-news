@@ -23,4 +23,5 @@ a {
     min-height: 100vh;
     width: 1024px;
     margin: 0 auto;
+    overflow-x: hidden;
 }

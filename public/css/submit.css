@@ -23,7 +23,7 @@ label {
 
 .wrap {
     flex: 1;
-    background: #fcc;
+    background: #FFFFCC;
     padding: 30px 60px;
 }
 
@@ -38,7 +38,7 @@ label {
     width: 120px;
     height: 40px;
     border-radius: 4px;
-    background: #cfc;
+    background: #99CC99;
     font-size: 18px;
 }
 

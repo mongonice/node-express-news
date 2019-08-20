@@ -1,3 +1,9 @@
+## 环境
+macOS Mojave  
+版本10.14.5
+
+node：8.11.1
+
 ## 安装依赖并启动
 
 1. 先安装依赖：npm install
@@ -9,6 +15,47 @@
 - express
 - body-parser
 - ejs
+- mongoose
+
+## 安装mongodb数据库及下载可视化数据库Robomongo(现在改名robo3t)或者mongoChef
+
+~ [robo3t](https://robomongo.org/download)  
+~ [mongoChef](https://studio3t.com/#mongochef-download-compare)
+
+## 如果MongoDB是通过HOMEBREW安装的，默认位置是：/usr/local/var/mongoDB
+
+  1. 先安装mongodb: brew install mongodb
+
+## 目录结构
+
+├── README.md
+├── config.js----------------------------- 公共配置文件
+├── database------------------------------ 未连接数据库之前手造数据文件存储
+│   └── data.json
+├── handler.js---------------------------- 具体业务(处理页面数据渲染)文件
+├── index.js
+├── lib----------------------------------- 数据库连接
+│   ├── api.js
+│   └── mongo.js
+├── models-------------------------------- 数据库处理
+│   └── news.js
+├── package-lock.json
+├── package.json
+├── public-------------------------------- 公共文件
+│   ├── css
+│   │   ├── common.css
+│   │   ├── detail.css
+│   │   ├── index.css
+│   │   └── submit.css
+│   └── images
+├── router.js----------------------------- 路由文件
+└── views--------------------------------- 模板文件
+    ├── detail.html
+    ├── index.html
+    ├── layout.html
+    ├── result.html
+    ├── search.html
+    └── submit.html
 
 ## 知识点
 
