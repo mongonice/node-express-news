@@ -1,0 +1,24 @@
+#gitignore
+.classpath
+.project
+.DS_Store
+package-lock.json
+log/
+.settings/
+.idea
+/**/**/.idea/
+#nodejs module
+node_modules
+**/node_modules
+**/**/node_modules
+#temp folder
+.tmp
+*.zip
+*.swp
+/target/
+/dev/
+/preview/
+/staging/
+test
+/dist/
+.eslintrc.*

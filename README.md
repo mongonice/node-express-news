@@ -3,6 +3,9 @@ macOS Mojave
 版本10.14.5
 
 node：8.11.1
+Express:
+mongodb:
+mongoose:
 
 ## 安装依赖并启动
 
@@ -24,45 +27,79 @@ node：8.11.1
 
 ## 如果MongoDB是通过HOMEBREW安装的，默认位置是：/usr/local/var/mongoDB
 
-  1. 先安装mongodb: brew install mongodb
+  1. 先安装Homebrew
+
+  ```zsh
+  → /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  ```
+  2. 再输入一下命令
+
+  ```zsh
+  → brew tap mongodb/brew
+  ```
+  
+  3. install mongodb
+
+  ```zsh
+  
+  → brew install mongodb-community@4.2
+  ```
+
+  4. 跑mongodb
+
+  ```zsh
+  → mongod --config /usr/local/etc/mongod.conf
+  ```
+
+  5. 然后再输入
+
+  ```
+  → brew services start mongodb-community@4.2
+  ```
+
+  6. 再安装mongoose
+
+  ```
+  → brew install mongoose
+  ```
 
 ## 目录结构
 
-├── README.md
-├── config.js----------------------------- 公共配置文件
-├── database------------------------------ 未连接数据库之前手造数据文件存储
-│   └── data.json
-├── handler.js---------------------------- 具体业务(处理页面数据渲染)文件
-├── index.js
-├── lib----------------------------------- 数据库连接
-│   ├── api.js
-│   └── mongo.js
-├── models-------------------------------- 数据库处理
-│   └── news.js
-├── package-lock.json
-├── package.json
-├── public-------------------------------- 公共文件
-│   ├── css
-│   │   ├── common.css
-│   │   ├── detail.css
-│   │   ├── index.css
-│   │   └── submit.css
-│   └── images
-├── router.js----------------------------- 路由文件
-└── views--------------------------------- 模板文件
-    ├── detail.html
-    ├── index.html
-    ├── layout.html
-    ├── result.html
-    ├── search.html
-    └── submit.html
+├── README.md    
+├── config.js----------------------------- 公共配置文件  
+├── database------------------------------ 未连接数据库之前手造数据文件存储  
+│   └── data.json  
+├── handler.js---------------------------- 具体业务(处理页面数据渲染)文件  
+├── index.js  
+├── lib----------------------------------- 数据库连接  
+│   ├── api.js  
+│   └── mongo.js  
+├── models-------------------------------- 数据库处理  
+│   └── news.js  
+├── package-lock.json  
+├── package.json  
+├── public-------------------------------- 公共文件  
+│   ├── css  
+│   │   ├── common.css  
+│   │   ├── detail.css  
+│   │   ├── index.css  
+│   │   └── submit.css  
+│   └── images  
+├── router.js----------------------------- 路由文件  
+└── views--------------------------------- 模板文件  
+    ├── detail.html  
+    ├── index.html  
+    ├── layout.html  
+    ├── result.html  
+    ├── search.html  
+    └── submit.html  
 
 ## 知识点
 
 #### 1. fs.readFile 读取文件
 
-- 1) 如果没指定encoding，则返回Buffer（即：一个个字节）
-- 2) 如果指定是utf8编码，则返回utf8编码的字符串
+  1) 如果没指定encoding，则返回Buffer（即：一个个字节）
+  2) 如果指定是utf8编码，则返回utf8编码的字符串
 
 ```js
 
