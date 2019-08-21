@@ -12,6 +12,7 @@ textarea {
     padding: 10px;
     font-size: 16px;
     color: #666;
+    resize: none;
 }
 h3 {
     padding: 10px 0;
@@ -28,7 +29,7 @@ label {
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 .form-item {
     display: flex;
@@ -40,6 +41,7 @@ label {
     border-radius: 4px;
     background: #99CC99;
     font-size: 18px;
+    margin-top: 10px;
 }
 
 

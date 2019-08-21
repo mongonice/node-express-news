@@ -2,10 +2,10 @@
 macOS Mojave  
 版本10.14.5
 
-node：8.11.1
-Express:
-mongodb:
-mongoose:
+node：8.11.1  
+Express: 4.17.1  
+mongodb: 3.3.0  
+mongoose: 5.6.10
 
 ## 安装依赖并启动
 
@@ -65,6 +65,8 @@ mongoose:
 
 ## 目录结构
 
+<pre>
+/
 ├── README.md    
 ├── config.js----------------------------- 公共配置文件  
 ├── database------------------------------ 未连接数据库之前手造数据文件存储  
@@ -93,6 +95,8 @@ mongoose:
     ├── result.html  
     ├── search.html  
     └── submit.html  
+
+</pre>
 
 ## 知识点
 
